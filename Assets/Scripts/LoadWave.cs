@@ -4,6 +4,7 @@ using System.Collections;
 public class LoadWave : MonoBehaviour {
 
     public GameObject Zombi;
+    public GameObject roundBanner;
     public int level = 5; 
 
     void Start()
@@ -14,17 +15,25 @@ public class LoadWave : MonoBehaviour {
 
     IEnumerator RePositionWithDelay()
     {
-        float spawnTime = 2.3f; 
+        float spawnTime = 2.3f;
+        
+        
+        //Load Round Banner
+        Vector3 bannerPos = new Vector3(-1.0f, 0.0f, -3.0f);
+        Instantiate(roundBanner, bannerPos, transform.rotation);
+        //    yield return new WaitForSeconds(bannerTime);
+        
         while (true)
         {
+        
+            yield return new WaitForSeconds(spawnTime);
 
             for (int i = 0; i < level; i++)
             {
                 SetRandomPosition();
                 Instantiate(Zombi, transform.position, transform.rotation);
             }
-            //spawnTime = 1 - Mathf.Exp(spawnTime) - spawnTime*Mathf.Exp(spawnTime);
-            yield return new WaitForSeconds(spawnTime); // This routine repeats the spawning.
+            // This routine repeats the spawning.
         }
     }
 
