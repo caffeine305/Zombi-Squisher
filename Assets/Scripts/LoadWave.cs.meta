@@ -1,10 +1,17 @@
 fileFormatVersion: 2
 guid: f70aae6c59e48dd40bab3a81a932af3e
-timeCreated: 1494388491
+timeCreated: 1500107062
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - roundBanner: {fileID: 187398, guid: 39115abb3174f9340a1b79ce5c52bac9, type: 2}
+  - gameOverBanner: {fileID: 122308, guid: 40ae6907a05edb6498d050ed9d468055, type: 2}
+  - endLevelBanner: {fileID: 115530, guid: a25e737448d42504a875842ed53f49aa, type: 2}
+  - Tower: {fileID: 188818, guid: 09097cfb692dc2f40bf091a00bbb9c81, type: 2}
+  - Zombi: {fileID: 157968, guid: 3bfcd559a324b3e4b87642cfb0e20162, type: 2}
+  - scoreText: {instanceID: 0}
+  - healthSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
